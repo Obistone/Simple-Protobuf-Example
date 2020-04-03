@@ -11,7 +11,7 @@ namespace Serializer
         /// <summary>
         /// Serializes your <paramref name="type"/> of choice.
         /// </summary>
-        /// <param name="type">The packet to serialize.</param>
+        /// <param name="type">The type to serialize.</param>
         /// <returns>null if there's an exception, otherwise the bytes of your packet.</returns>
         public static byte[] Serialize(YourType type)
         {

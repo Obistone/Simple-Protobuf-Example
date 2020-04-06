@@ -13,7 +13,7 @@ namespace Serializer
         /// </summary>
         /// <param name="type">The type to serialize.</param>
         /// <returns>null if there's an exception, otherwise the bytes of your packet.</returns>
-        public static byte[] Serialize(YourType type)
+        public static byte[] Serialize<T>(T type)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace Serializer
         }
 
         /// <summary>
-        /// Deserializes bytes into an <see cref="YourType"/>.
+        /// Deserializes bytes into your type of choice.
         /// </summary>
         /// <param name="data">The bytes to deserialize.</param>
         /// <returns>null if there's an exception.</returns>

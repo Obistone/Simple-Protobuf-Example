@@ -34,13 +34,13 @@ namespace Serializer
         /// </summary>
         /// <param name="data">The bytes to deserialize.</param>
         /// <returns>null if there's an exception.</returns>
-        public static YourType Deserialize(byte[] data)
+        public static T Deserialize<T>(byte[] data)
         {
             try
             {
                 using (MemoryStream stream = new MemoryStream(data))
                 {
-                    return ProtoBuf.Serializer.Deserialize<YourType>(stream);
+                    return ProtoBuf.Serializer.Deserialize<T>(stream);
                 }
             }
             catch
